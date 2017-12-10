@@ -2,7 +2,6 @@ import { observable, action, toJS } from 'mobx';
 
 
 export default class UIStore {
-
   // the card currently being edited
   @observable editingCard = null;
 
@@ -21,7 +20,7 @@ export default class UIStore {
   }
 
   @action.bound
-  changeEditingCardColor(color){
+  changeEditingCardColor(color) {
     this.editingCard.color = color;
   }
 
@@ -30,5 +29,4 @@ export default class UIStore {
     this.editingCard = null;
     this.editingCardColumnId = '';
   }
-
 }

@@ -1,4 +1,4 @@
-import { observable, computed, action } from 'mobx';
+import { observable, action } from 'mobx';
 import uuid from 'uuid';
 
 import { DEFAULT_CARD_COLOR } from 'constants';
@@ -15,7 +15,7 @@ export default class CardsStore {
     const card = {
       id: uuid(),
       text,
-      color: DEFAULT_CARD_COLOR
+      color: DEFAULT_CARD_COLOR,
     };
     this.cards.push(card);
     return card.id;
@@ -43,10 +43,9 @@ export default class CardsStore {
   }
 
   @action.bound
-  changeCard (editedCard) {
+  changeCard(editedCard) {
     const card = this.getCard(editedCard.id);
     card.text = editedCard.text;
     card.color = editedCard.color;
   }
-
 }

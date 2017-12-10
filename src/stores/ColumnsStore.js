@@ -1,4 +1,4 @@
-import { observable, computed, action } from 'mobx';
+import { observable, action } from 'mobx';
 import uuid from 'uuid';
 
 export default class ColumnsStore {
@@ -13,10 +13,10 @@ export default class ColumnsStore {
     const column = {
       id: uuid(),
       title,
-      cardsIds: []
+      cardsIds: [],
     };
     this.columns.push(column);
-  };
+  }
 
 
   @action.bound
@@ -34,7 +34,7 @@ export default class ColumnsStore {
 
   @action.bound
   changeCardColumn(cardId, oldColumnId, newColumnId) {
-    this.columns.forEach(column => {
+    this.columns.forEach((column) => {
       if (column.id === oldColumnId) {
         column.cardsIds = column.cardsIds.filter(id => id !== cardId);
       }
@@ -42,12 +42,12 @@ export default class ColumnsStore {
       if (column.id === newColumnId && !column.cardsIds.includes(cardId)) {
         column.cardsIds.push(cardId);
       }
-    })
+    });
   }
 
   @action.bound
   moveCard(dragId, hoverId, oldColumnId, newColumnId, isBelow = false) {
-    this.columns.forEach(column => {
+    this.columns.forEach((column) => {
       if (column.id === oldColumnId) {
         column.cardsIds = column.cardsIds.filter(id => id !== dragId);
       }
@@ -56,8 +56,9 @@ export default class ColumnsStore {
         let index = hoverId
           ? cardsIds.findIndex(id => id === hoverId)
           : 0;
-        if (isBelow)
+        if (isBelow) {
           index += 1;
+        }
 
         if (!cardsIds.includes(dragId)) {
           const newCardsIds = cardsIds.concat();
@@ -84,5 +85,5 @@ export default class ColumnsStore {
     const column = this.getColumn(columnId);
     column.cardsIds = column.cardsIds.filter(card => card !== cardId);
   }
-
 }
+

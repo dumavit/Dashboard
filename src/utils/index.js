@@ -16,9 +16,6 @@ export const addFakeData = (columnsStore, cardsStore) => {
   cardsStore.createCard('Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur');
 
 
-
-
-
   const { cards } = cardsStore;
   const { columns } = columnsStore;
   columnsStore.addCardToColumn(columns[0].id, cards[0].id);
@@ -31,5 +28,4 @@ export const addFakeData = (columnsStore, cardsStore) => {
   columnsStore.addCardToColumn(columns[3].id, cards[7].id);
   columnsStore.addCardToColumn(columns[3].id, cards[8].id);
   columnsStore.addCardToColumn(columns[3].id, cards[9].id);
-
 };

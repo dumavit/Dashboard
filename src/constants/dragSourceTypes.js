@@ -3,5 +3,5 @@ const CARD_TYPE = 'CARD_TYPE';
 
 export default {
   COLUMN_TYPE,
-  CARD_TYPE
-}
+  CARD_TYPE,
+};

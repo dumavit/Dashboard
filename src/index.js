@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'mobx-react';
-// import DevTools from 'mobx-react-devtools';
 
-import Dashboard from './components/Dashboard';
+import Dashboard from 'components/Dashboard';
 import ColumnsStore from 'stores/ColumnsStore';
 import CardsStore from 'stores/CardsStore';
 import UIStore from 'stores/UIStore';
@@ -25,16 +24,10 @@ addFakeData(columnsStore, cardsStore); //
 
 render(
   <div>
-    {/*<DevTools/>*/}
     <Provider {...stores}>
-      <Dashboard/>
+      <Dashboard />
     </Provider>
   </div>,
   document.getElementById('root'),
 );
 
-
-// playing around in the console
-window.columnsStore = columnsStore;
-window.cardsStore = cardsStore;
-window.uiStore = uiStore;
