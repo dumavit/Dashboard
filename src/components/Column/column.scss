@@ -1,0 +1,70 @@
+@import '~shared/styles/variables';
+
+.columnContainer {
+  background: $column-background;
+  border-radius: $border-radius;
+  cursor: pointer;
+  overflow: hidden;
+  
+  &.isDragging {
+    opacity: 0;
+  }
+}
+
+.columnTitle {
+  display: flex;
+  align-items: flex-start;
+}
+
+.titleTextarea {
+  font-size: 14px;
+  font-weight: 700;
+  width: 80%;
+  overflow: hidden;
+  word-wrap: break-word;
+  height: 24px;
+  line-height: 22px;
+  background: transparent;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: none;
+  margin: -3px -5px;
+  padding: 3px 5px;
+  resize: none;
+  
+  &:focus {
+    box-shadow: 0 0 1px 0 #0284c6;
+    background: white;
+  }
+}
+
+.deleteButton {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  
+  &:active {
+    background-color: red;
+  }
+  
+  &:hover {
+    i {
+      color: $delete-button-hover-color;
+    }
+  }
+  
+  i {
+    font-size: 12px;
+    color: $delete-button-color;
+    transform: translateX(-5px);
+  }
+}
+
+.cardWrapper {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: $border-radius;
+  margin: 10px 10px 15px 10px;
+}
+

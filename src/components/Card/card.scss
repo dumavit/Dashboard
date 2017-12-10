@@ -1,0 +1,47 @@
+@import '~shared/styles/variables';
+
+.cardContainer {
+  background-color: rgb(255, 255, 255);
+  border-radius: $border-radius;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  line-height: 24px;
+  min-height: 24px;
+  padding: 5px 20px 5px 5px;
+  word-wrap: break-word;
+  position: relative;
+  
+  &.isDragging {
+    opacity: 0;
+  }
+  
+  &:hover {
+    .editCardButton {
+      visibility: visible;
+    }
+  }
+}
+
+.editCardButton {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  opacity: .8;
+  padding: 4px;
+  right: 3px;
+  top: 3px;
+  visibility: hidden;
+  
+  i {
+    font-size: 15px;
+    color: $delete-button-color;
+  }
+  &:hover {
+    i {
+      color: $delete-button-hover-color;
+    }
+  }
+  
+}

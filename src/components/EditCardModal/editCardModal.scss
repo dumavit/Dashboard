@@ -1,0 +1,75 @@
+@import '~shared/styles/variables';
+
+
+.editCardTextarea {
+  border-radius: $border-radius;
+  width: 300px;
+  height: 168px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  resize: none;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.buttonsWrapper{
+  display: flex;
+  margin-top: 8px;
+}
+
+.saveButton {
+  background-color: #5aac44;
+  height: 26px;
+  width: 50px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  border: none;
+  &:hover {
+    background-color: #519839;
+  }
+  &:active {
+    background-color: #49852e;
+  }
+  
+}
+
+.deleteButton{
+  margin-left: auto;
+  height: 26px;
+  width: 50px;
+  font-size: 16px;
+  color: white;
+  
+  border: none;
+  outline: none;
+  background-color: #d9534f;
+  
+  &:hover{
+    background-color: #c9302c;
+  }
+}
+
+.closeButton {
+  width: 26px;
+  height: 26px;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 4px;
+  
+  &:hover {
+    i {
+      color: $delete-button-hover-color;
+    }
+  }
+  
+  i {
+    font-size: 20px;
+    color: $delete-button-color;
+    transform: translateX(-4px);
+  }
+}

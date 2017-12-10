@@ -1,0 +1,71 @@
+@import '~shared/styles/variables';
+
+.container {
+  background: $column-background;
+}
+
+.addCardTextarea {
+  border-radius: $border-radius;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 10px;
+  height: 24px;
+  line-height: 24px;
+  resize: none;
+  
+  &.active {
+    background: white;
+    height: 72px;
+  }
+  
+  &::placeholder {
+    transition: color 85ms ease-in;
+  }
+}
+
+.buttonsWrapper {
+  padding-top: 5px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.saveButton {
+  background-color: #5aac44;
+  height: 26px;
+  width: 50px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  border: 0;
+  &:hover {
+    background-color: #519839;
+  }
+  &:active {
+    background-color: #49852e;
+  }
+  
+}
+
+.deleteButton {
+  width: 26px;
+  height: 26px;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 4px;
+  
+  &:hover {
+    i {
+      color: $delete-button-hover-color;
+    }
+  }
+  
+  i {
+    font-size: 20px;
+    color: $delete-button-color;
+    transform: translateX(-4px);
+  }
+}

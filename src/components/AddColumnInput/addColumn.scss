@@ -1,0 +1,23 @@
+@import '~shared/styles/variables';
+
+.addColumnInput {
+  color: white;
+  border-radius: $border-radius;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .18);
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 10px;
+  
+  &:hover, &:focus {
+    background: rgba(0, 0, 0, .38);
+  }
+  
+  &::placeholder {
+    color: white;
+    transition: color 85ms ease-in;
+  }
+}
