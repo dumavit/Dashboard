@@ -21,6 +21,7 @@ class AddColumnInput extends Component {
       const columnTitle = this.inputText.trim();
       if (columnTitle) {
         createColumn(columnTitle);
+        this.inputText = '';
       }
     }
   };
